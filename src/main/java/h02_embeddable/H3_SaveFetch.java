@@ -42,6 +42,7 @@ public class H3_SaveFetch {
 //		session.save(ogrenci4);
 //		
 //		
+		
 		// Fetch Islemi
 		
 		

@@ -7,14 +7,19 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 //================================================================
+
  //HIBERNATE ICIN TABLO TANIMLAMASININ YAPILMASI 
- //tablo oluşturabilmek için içerik hazırlama )alttakiler)
+ //tablo oluşturabilmek için içerik hazırlama )
+  //alttakiler)
+
  //POJO: Plain Old Java Object									
  //1) Private degiskenler tanimlanir.
  //2) constructor olusturulur.
  //3) Getter ve Setter metotlar tanimlanir.
  //4) toString() metodu ile nesne yazdirilabilir hale getirilir.
+
  //================================================================
+
  /*
 	Bir Class Hibernate ile tablo olusturmada kullanilacaksa degiskenlerin
 	“final” veya “static” tanimlanMAMAsi gerekir. 
@@ -32,7 +37,7 @@ import javax.persistence.Transient;
 @Table(name ="Sehir_Tablosu")              // mysql deki tablo ismi olarak gözükür
 public class H1_Sehir {
 	
-	@Id                             // =======>    primary key belirler.        
+	@Id                             // =======>    primary key belirler. not null ve unique olmak zorundadir.       
 	@Column(name="sehir_plaka")		// =======>    mysql kolon adini belirler.
 	private int sehirPlaka;
 	

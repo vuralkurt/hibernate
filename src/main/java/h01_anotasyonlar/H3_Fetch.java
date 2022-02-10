@@ -5,11 +5,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+//MySQL deki verileri cekerek görmek icin bu class olusturuldu.
 public class H3_Fetch {
 
 	public static void main(String[] args) {
 		
-	SessionFactory sf	= new Configuration().configure("hibernate.cfg.xml")
+	SessionFactory sf	= new Configuration().configure("hibernate.cfg.xml") //bir önceki sayfadaki 2 satirin birlestirilmis hali.
 		    .addAnnotatedClass(H1_Sehir.class).buildSessionFactory();
 		
 		
@@ -28,7 +29,7 @@ public class H3_Fetch {
 	System.out.println(session.get(H1_Sehir.class, 35).getSehirAdi());
 	System.out.println(session.get(H1_Sehir.class, 45).getSehirAdi());
 	
-	tx.commit();		// UNUTMAMAM IYI OLUR...
+	tx.commit();		// UNUTMAMAK IYI OLUR...
 	
 	sf.close();
 	session.close();

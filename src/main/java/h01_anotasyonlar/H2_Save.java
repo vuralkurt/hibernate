@@ -15,11 +15,13 @@ public class H2_Save {
 
 	public static void main(String[] args) {
 		
-		
+		//hibernateden import edilir.
 		Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(H1_Sehir.class);
+		//cfg.xml dosyasindaki bilgilerle mysql e baglan.                                  kalip classi buraya cagir
 		
+		//önce büyük bir fabrika acilacak.MySQL icin yer aciyoruz.Bunu yazmak zorundayiz.
 		SessionFactory sf =con.buildSessionFactory();      // acacagimiz alanlar parenti,  alan fabrikasi
-		
+		//daha kücük bir alan kendime olusturuyorum.
 		Session session =sf.openSession();		           //alan fabrikasindan yer baslattik
 		
 		
@@ -38,7 +40,7 @@ public class H2_Save {
 //        
 //		session.save(sehir1);// insert into
 //		
-//		session.save(new H1_Sehir(35,"Izmir",2500000));
+//		session.save(new H1_Sehir(35,"Izmir",2500000)); // daha kisa olsturulma yöntemi
 //		
 		
 		//DISARIDAN VERI GIRELIM
